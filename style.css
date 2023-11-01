@@ -2,6 +2,8 @@
 
  :root {
     --black: #282828;
+    --accent: #998431;
+    --white: #FFF;
  }
 
 * {
@@ -116,18 +118,16 @@ a {
     padding: 15px 30px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     position: absolute;
     bottom: 110px;
 }
-
+    
 #hero .hero-bottom a {
-    color: #FFF;
+    color: var(--white);
     text-align: center;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
     letter-spacing: 0.8px;
     text-transform: uppercase;
     background: #99862A;
@@ -164,7 +164,7 @@ a {
 #text .line {
     height: 1px;
     width: 160px;
-    border: 1px solid #FFF;
+    border: 1px solid var(--white);
     margin: 0 auto;
 }
 
@@ -172,7 +172,7 @@ a {
     width: 733px;
     justify-content: center;
     margin: 0 auto;
-    color: #FFF;
+    color: var(--white);
     text-align: center;
     font-family: Montserrat;
     font-size: 16px;
@@ -206,18 +206,20 @@ a {
     width: 1110px;
     height: 880px;
     margin: 0 auto;
-    border-top: 2px solid #998431;
-    border-bottom: 2px solid #998431;
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
     
 }
 
 #collection .col-left { 
     width: 445px;
     height: 880px;
+    padding-right: 125px;
 }
 
 #collection .col-right {
     width: 100%;
+    text-align: right;
 }
 
 #collection .col-left .title {
@@ -243,7 +245,9 @@ a {
 #collection .col-left .line {
     height: 1px;
     width: 160px;
-    border: 1px solid var(--black);
+    border: none;
+    color: var(--black);
+    background-color: var(--black);
 }
 
 #collection .col-left .text {
@@ -256,6 +260,74 @@ a {
     text-align: left;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+#collection .col-left table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 445px;
+    border-spacing: 0;
+}
+
+#collection .col-left table .year {
+    color: var(--black, #282828);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 26px 24px;
+    text-align: center;
+    border-right: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    border-collapse: collapse;  
+}
+
+#collection .col-left table tr:last-child .year{
+    border-bottom: none;
+}
+
+#collection .col-left tbody .info { 
+    padding: 10px 37px 15px 30px;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+
+#collection .col-left tbody tr:last-child .info {
+    border-bottom: none;
+}
+
+#collection .col-left table h1 {
+    color: var(--black, #282828);
+    font-family: Playfair Display;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%; 
+    width: 303px;
+    padding-bottom: 5px;
+}
+
+#collection .col-left .collection-button {
+   width: 445px;
+   text-align: left;
+}
+
+#collection .col-left .cta {
+    color: var(--white);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+     text-decoration: none;
+    display: inline-flex;
+    padding: 15px 30px;
+    background: var(--accent);
+}
+
+#collection .col-right img {
+    width: 540px;
+    height: 758px;
 }
 
 /* End Collection section */
